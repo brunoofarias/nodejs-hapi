@@ -1,4 +1,4 @@
-const createDatabase = require('./../config/database.js')
+const createDatabase = require('./../config/database')
 
 const userModel = () => {
     const connection = createDatabase().start()
@@ -6,8 +6,8 @@ const userModel = () => {
     const save =  (user) => {
         return new Promise((resolve, reject) => {
             connection.query({
-                sql: `INSERT INTO usuario (nome, cpf, data_nascimento, endereco) VALUES (?, ?, ?, ?)`,
-                values: [ user.nome, user.cpf, user.data_nascimento, user.endereco ]
+                sql: `INSERT INTO usuario (nome, cpf, data_nascimento, endereco, cidade, estado, cep, complemento) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+                values: [ user.nome, user.cpf, user.data_nascimento, user.endereco, user.cidade, user.estado, user.cep, user.complemento ]
             }, (err, row) => {
                 if (err) {
                     reject({
@@ -51,8 +51,8 @@ const userModel = () => {
     const update = (user, id) => {
         return new Promise((resolve, reject) => {
             connection.query({
-                sql: `UPDATE usuario SET nome = ?, cpf = ?, data_nascimento = ?, endereco = ? WHERE id = ?`,
-                values: [ user.nome, user.cpf, user.data_nascimento, user.endereco, id ]
+                sql: `UPDATE usuario SET nome = ?, cpf = ?, data_nascimento = ?, endereco = ?, cidade = ?, estado = ?, cep = ?, complemento = ? WHERE id = ?`,
+                values: [ user.nome, user.cpf, user.data_nascimento, user.endereco, user.cidade, user.estado, user.cep, user.complemento, id ]
             }, (err, row) => {
                 if (err) {
                     reject({

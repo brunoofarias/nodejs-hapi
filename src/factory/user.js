@@ -7,7 +7,7 @@ const UserFactory = () => {
         }
 
         if (checkParams) {
-            let keys = [ "nome", "cpf", "data_nascimento", "endereco" ]
+            let keys = [ "nome", "cpf", "data_nascimento", "endereco", "cidade", "estado", "cep", "complemento" ]
 
             if (!arrayKeysExists(keys, user)) {
                 throw new Error('INVALID_PARAMTERS')
