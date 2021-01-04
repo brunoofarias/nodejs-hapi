@@ -14,6 +14,7 @@ Dependencias para rodar o projeto
   > mkidir nodejs-hapi && cd nodejs-hapi
   > git init
   > git remote add origin https://github.com/brunoofarias/nodejs-hapi.git
+  > git pull origin master
   > npm install
 ```
 ### Configurações
