@@ -66,12 +66,26 @@ const UserServices = () => {
         })
     }
 
+    const auth = (user) => {
+        return new Promise((resolve, reject) => {
+            userModel.auth(user).then(
+                result => {
+                    resolve(result)
+                },
+                error => {
+                    reject(new Error(error.message))
+                }
+            ) 
+        })
+    }
+
     return {
         save,
         searchByID,
         update,
         deleteUser,
-        search
+        search,
+        auth
     }
 }
 

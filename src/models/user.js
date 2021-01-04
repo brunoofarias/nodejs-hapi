@@ -114,12 +114,37 @@ const userModel = () => {
         })
     }
 
+    const auth = (user) => {
+        return new Promise((resolve, reject) => {
+            connection.query({
+                sql: `SELECT * FROM usuario WHERE cpf LIKE ? AND senha LIKE ? LIMIT 1`,
+                values: [ user.cpf, user.senha ]
+            }, (err, row) => {
+                if (err) {
+                    reject({
+                        status: 500,
+                        message: 'Erro ao buscar usuário' + err
+                    })
+                } else {
+                    const status = row.length > 0 ? 200 : 404
+                    const message = row.length > 0 ? row[0] : false
+
+                    resolve({
+                        status: status,
+                        message: message
+                    })
+                }
+            })
+        })
+    }
+
     return {
         save,
         searchByID,
         update,
         deleteUser,
-        search
+        search,
+        auth
     }
 }
 

@@ -15,8 +15,17 @@ const UserFactory = () => {
         }
     }
 
+    const verifyAuth = (user) => {
+        let keys = [ "cpf", "senha" ]
+
+        if (!arrayKeysExists(keys, user)) {
+            throw new Error('INVALID_PARAMTERS')
+        }
+    }
+
     return {
-        verify
+        verify,
+        verifyAuth
     }
 }
 
