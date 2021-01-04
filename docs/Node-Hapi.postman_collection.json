@@ -94,6 +94,16 @@
 				{
 					"name": "http://127.0.0.1:3000/user/5",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIiwiY2lkYWRlIjpudWxsLCJlc3RhZG8iOm51bGwsImNlcCI6bnVsbCwiY29tcGxlbWVudG8iOm51bGx9LCJpYXQiOjE2MDk3NjQ5MDh9.h5fRyjio-3O7QEdcQ1K_PeSHPK4LVZnkg7Pf_HIA2J0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -117,6 +127,16 @@
 				{
 					"name": "http://127.0.0.1:3000/user/{Nome ou CPF}",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIiwiY2lkYWRlIjpudWxsLCJlc3RhZG8iOm51bGwsImNlcCI6bnVsbCwiY29tcGxlbWVudG8iOm51bGx9LCJpYXQiOjE2MDk3NjQ5MDh9.h5fRyjio-3O7QEdcQ1K_PeSHPK4LVZnkg7Pf_HIA2J0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -145,6 +165,16 @@
 				{
 					"name": "http://127.0.0.1:3000/book",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIiwiY2lkYWRlIjpudWxsLCJlc3RhZG8iOm51bGwsImNlcCI6bnVsbCwiY29tcGxlbWVudG8iOm51bGx9LCJpYXQiOjE2MDk3NjQ5MDh9.h5fRyjio-3O7QEdcQ1K_PeSHPK4LVZnkg7Pf_HIA2J0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -176,6 +206,16 @@
 				{
 					"name": "http://127.0.0.1:3000/book/5",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIiwiY2lkYWRlIjpudWxsLCJlc3RhZG8iOm51bGwsImNlcCI6bnVsbCwiY29tcGxlbWVudG8iOm51bGx9LCJpYXQiOjE2MDk3NjQ5MDh9.h5fRyjio-3O7QEdcQ1K_PeSHPK4LVZnkg7Pf_HIA2J0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -208,6 +248,16 @@
 				{
 					"name": "http://127.0.0.1:3000/book/{id}",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIiwiY2lkYWRlIjpudWxsLCJlc3RhZG8iOm51bGwsImNlcCI6bnVsbCwiY29tcGxlbWVudG8iOm51bGx9LCJpYXQiOjE2MDk3NjQ5MDh9.h5fRyjio-3O7QEdcQ1K_PeSHPK4LVZnkg7Pf_HIA2J0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -234,7 +284,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:3000/book/78784948",
+							"raw": "http://127.0.0.1:3000/book/{search}",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -245,7 +295,7 @@
 							"port": "3000",
 							"path": [
 								"book",
-								"78784948"
+								"{search}"
 							]
 						}
 					},
@@ -322,7 +372,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:3000/replica/2",
+							"raw": "http://127.0.0.1:3000/replica/{id}",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -333,7 +383,7 @@
 							"port": "3000",
 							"path": [
 								"replica",
-								"2"
+								"{id}"
 							]
 						}
 					},
@@ -355,7 +405,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:3000/replica/2",
+							"raw": "http://127.0.0.1:3000/replica/{id}",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -366,7 +416,7 @@
 							"port": "3000",
 							"path": [
 								"replica",
-								"2"
+								"{id}"
 							]
 						}
 					},
@@ -388,7 +438,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:3000/replica/001B",
+							"raw": "http://127.0.0.1:3000/replica/{codigo}",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -399,7 +449,7 @@
 							"port": "3000",
 							"path": [
 								"replica",
-								"001B"
+								"{codigo}"
 							]
 						}
 					},

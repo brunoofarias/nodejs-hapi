@@ -36,6 +36,7 @@ Em seguida deve-se criar um arquivo chamado ".env", seguido o padrão especifica
 
 ### Endpoints
 Na pasta /docs, você encontrará a collection do Postman contendo os exemplos de como realizar as requests.
+[Documentação da API](https://documenter.getpostman.com/view/3579440/TVt2eQQ9)
 
 ### Contribuir com o projeto
 
