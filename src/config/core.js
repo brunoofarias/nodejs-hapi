@@ -1,5 +1,5 @@
-const createWebserver = require('./webserver.js')
-const createDatabase = require('./database.js')
+const createWebserver = require('./webserver')
+const createDatabase = require('./database')
 
 const createCore = (config = {}) => {
     const webserver = config.webserver || createWebserver()

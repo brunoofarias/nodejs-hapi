@@ -1,7 +1,7 @@
 const process = require('dotenv').config().parsed
 const hapi = require('@hapi/hapi')
 const hapiAuthJwt2 = require('hapi-auth-jwt2')
-const createRoutes = require('./routes.js')
+const createRoutes = require('./routes')
 
 const createWebserver = () => {
     const server = hapi.server({
