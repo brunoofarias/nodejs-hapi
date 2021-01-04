@@ -1,0 +1,592 @@
+{
+	"info": {
+		"_postman_id": "b29b629c-dbe1-4104-8ad1-a11a31cef1fa",
+		"name": "Node-Hapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "http://127.0.0.1:3000/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIn0sImlhdCI6MTYwOTcyOTExN30.GYpK15VIoXscZhYUlm59uvM3sTl4Mv5SZV-U9o_9JPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bruno\",\r\n    \"cpf\": \"44417658862\",\r\n    \"data_nascimento\": \"2000-08-15\",\r\n    \"endereco\": \"Estrada do aderno, 504\",\r\n    \"cidade\": \"Carapicíba\",\r\n    \"estado\": \"SP\",\r\n    \"cep\": \"06390070\",\r\n    \"complemento\": \"N/A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/user/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIn0sImlhdCI6MTYwOTcyOTExN30.GYpK15VIoXscZhYUlm59uvM3sTl4Mv5SZV-U9o_9JPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bruno Farias\",\r\n    \"cpf\": \"dasdasd\",\r\n    \"data_nascimento\": \"2000-08-15\",\r\n    \"endereco\": \"Estrada do aderno, 504\",\r\n    \"cidade\": \"Carapicíba\",\r\n    \"estado\": \"SP\",\r\n    \"cep\": \"06390070\",\r\n    \"complemento\": \"Casa 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/user/16",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/user/5",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/user/{id}",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/user/{Nome ou CPF}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/user/{Nome ou CPF}",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"{Nome ou CPF}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "http://127.0.0.1:3000/book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"livro\": \"Manual de Residencia médica\",\r\n    \"autor\": \"Andrea Remigio\",\r\n    \"isbn\": \"564541541814800\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/book",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/book/5",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"livro\": \"Manual de Residencia médica 2º ED\",\r\n    \"autor\": \"Andrea Remigio Oliveira\",\r\n    \"isbn\": \"78784948\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/book/{id}",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/book/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/book/{id}",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/book/78784948",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/book/78784948",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"78784948"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Replica",
+			"item": [
+				{
+					"name": "http://127.0.0.1:3000/replica",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIn0sImlhdCI6MTYwOTcyOTExN30.GYpK15VIoXscZhYUlm59uvM3sTl4Mv5SZV-U9o_9JPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"001B\",\r\n    \"livro_id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/replica",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"replica"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/replica/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIn0sImlhdCI6MTYwOTcyOTExN30.GYpK15VIoXscZhYUlm59uvM3sTl4Mv5SZV-U9o_9JPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"002B\",\r\n    \"livro_id\": 6\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/replica/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"replica",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/replica/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIn0sImlhdCI6MTYwOTcyOTExN30.GYpK15VIoXscZhYUlm59uvM3sTl4Mv5SZV-U9o_9JPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/replica/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"replica",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/replica/001B",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIn0sImlhdCI6MTYwOTcyOTExN30.GYpK15VIoXscZhYUlm59uvM3sTl4Mv5SZV-U9o_9JPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/replica/001B",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"replica",
+								"001B"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "http://127.0.0.1:3000/auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"15154445\",\r\n    \"senha\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/auth",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rent",
+			"item": [
+				{
+					"name": "http://127.0.0.1:3000/rent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIiwiY2lkYWRlIjpudWxsLCJlc3RhZG8iOm51bGwsImNlcCI6bnVsbCwiY29tcGxlbWVudG8iOm51bGx9LCJpYXQiOjE2MDk3NjQ5MDh9.h5fRyjio-3O7QEdcQ1K_PeSHPK4LVZnkg7Pf_HIA2J0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"copia\": 1,\r\n    \"usuario\": 2,\r\n    \"dias\": 7\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/rent",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"rent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/rent/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIiwiY2lkYWRlIjpudWxsLCJlc3RhZG8iOm51bGwsImNlcCI6bnVsbCwiY29tcGxlbWVudG8iOm51bGx9LCJpYXQiOjE2MDk3NjQ5MDh9.h5fRyjio-3O7QEdcQ1K_PeSHPK4LVZnkg7Pf_HIA2J0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/rent/{id}",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"rent",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/rent/getBooksMostDelayedPerMonth",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIiwiY2lkYWRlIjpudWxsLCJlc3RhZG8iOm51bGwsImNlcCI6bnVsbCwiY29tcGxlbWVudG8iOm51bGx9LCJpYXQiOjE2MDk3NjQ5MDh9.h5fRyjio-3O7QEdcQ1K_PeSHPK4LVZnkg7Pf_HIA2J0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/rent/getBooksMostDelayedPerMonth",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"rent",
+								"getBooksMostDelayedPerMonth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3000/rent/getBooksMostRentedPerCity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOjIwMCwibWVzc2FnZSI6eyJpZCI6MTUsIm5vbWUiOiJBZG1pbiIsImNwZiI6IjE1MTU0NDQ1IiwiZGF0YV9uYXNjaW1lbnRvIjoiMjAwMC0xMi0zMVQwMjowMDowMC4wMDBaIiwiZW5kZXJlY28iOiJhc2Rhc2QiLCJzZW5oYSI6ImFkbWluIiwiY2lkYWRlIjpudWxsLCJlc3RhZG8iOm51bGwsImNlcCI6bnVsbCwiY29tcGxlbWVudG8iOm51bGx9LCJpYXQiOjE2MDk3NjQ5MDh9.h5fRyjio-3O7QEdcQ1K_PeSHPK4LVZnkg7Pf_HIA2J0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/rent/getBooksMostRentedPerCity",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"rent",
+								"getBooksMostRentedPerCity"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
